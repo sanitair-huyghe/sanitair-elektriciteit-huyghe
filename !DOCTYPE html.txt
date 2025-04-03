@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanitair & Elektriciteit Huyghe</title>
+    <meta name="description" content="Sanitair & Elektriciteit Huyghe is gespecialiseerd in sanitaire installaties en elektriciteitswerken. Wij bieden betrouwbare service in België.">
+    <meta name="keywords" content="sanitair, elektriciteit, installaties, herstellingen, loodgieter, elektricien, België, Huyghe">
+    <meta name="author" content="Sanitair & Elektriciteit Huyghe">
+    <meta name="robots" content="index, follow">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        header {
+            background-color: #0056b3;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        .container {
+            background-color: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin: 50px auto;
+            width: 80%;
+            max-width: 1200px;
+        }
+        .services {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        .service {
+            flex: 1;
+            background: #f1f1f1;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .service:hover {
+            background-color: #e0e0e0;
+        }
+        .service h2 {
+            font-size: 28px;
+            color: #333;
+        }
+        .service img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .service p {
+            font-size: 16px;
+            color: #666;
+        }
+        .service-details {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+        .contact-info {
+            margin-top: 30px;
+            font-size: 18px;
+            text-align: center;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        .contact-info a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Sanitair & Elektriciteit Huyghe</h1>
+        <p>Uw specialist in sanitaire installaties en elektriciteitswerken</p>
+    </header>
+
+    <div class="container">
+        <!-- Diensten Sectie -->
+        <div class="services">
+            <div class="service" onclick="toggleDetails('electriciteit-details')">
+                <h2>Elektriciteit</h2>
+                <img src="electriciteit-image.jpg" alt="Elektriciteit installatie">
+                <p>Wij bieden professionele elektriciteitsdiensten, van installatie tot herstellingen.</p>
+            </div>
+
+            <div class="service" onclick="toggleDetails('sanitair-details')">
+                <h2>Sanitair</h2>
+                <img src="sanitair-afbeelding.jpg" alt="Sanitaire Installatie">
+                <p>Van leidingen tot douches, wij zorgen voor uw sanitaire installaties en herstellingen.</p>
+            </div>
+        </div>
+
+        <!-- Details secties (verborgen) -->
+        <div id="electriciteit-details" class="service-details">
+            <h3>Meer over Elektriciteit</h3>
+            <img src="electriciteit-detailed-image.jpg" alt="Meer over Elektriciteit" style="width: 100%; height: auto; border-radius: 10px; margin-top: 20px;">
+            <p>Onze elektriciteitsdiensten omvatten:</p>
+            <ul>
+                <li>Installatie van elektrische systemen</li>
+                <li>Herstellingen van elektrische problemen</li>
+                <li>Verlichting en stopcontacten plaatsen</li>
+                <li>Groepsverdelers en meterkasten</li>
+            </ul>
+            <p>Wij zorgen voor een veilige en efficiënte elektrische installatie in uw woning of bedrijfspand.</p>
+        </div>
+
+        <div id="sanitair-details" class="service-details">
+            <h3>Meer over Sanitair</h3>
+            <img src="sanitair-detailed-image.jpg" alt="Meer over Sanitair" style="width: 100%; height: auto; border-radius: 10px; margin-top: 20px;">
+            <p>Onze sanitairservice biedt onder andere:</p>
+            <ul>
+                <li>Installatie van sanitaire voorzieningen (douches, toiletten, wastafels)</li>
+                <li>Reparaties van leidingen en kranen</li>
+                <li>Vervangen van verouderde sanitaire apparaten</li>
+            </ul>
+            <p>Laat ons uw badkamer en keuken perfect inrichten met de juiste sanitaire voorzieningen.</p>
+        </div>
+
+        <!-- Contact Informatie -->
+        <div class="contact-info">
+            <h3>Neem contact met ons op</h3>
+            <p><strong>Frederic Huyghe</strong></p>
+            <p>📞 +32 471 73 59 14</p>
+            <p>📧 <a href="mailto:alwip@proximus.be">alwip@proximus.be</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Sanitair & Elektriciteit Huyghe. Alle rechten voorbehouden.</p>
+    </footer>
+
+    <script>
+        // Functie om de details van een sectie te tonen/te verbergen
+        function toggleDetails(sectionId) {
+            var electriciteitDetails = document.getElementById('electriciteit-details');
+            var sanitairDetails = document.getElementById('sanitair-details');
+
+            // Sluit beide secties als ze open zijn
+            electriciteitDetails.style.display = 'none';
+            sanitairDetails.style.display = 'none';
+
+            // Toon de aangeklikte sectie
+            var section = document.getElementById(sectionId);
+            if (section.style.display === "block") {
+                section.style.display = "none";
+            } else {
+                section.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
